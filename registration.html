@@ -4,11 +4,11 @@
 <title> Registration </title> </head>
 <body onload="hideMy()">
 <h1> Fill Your Details To Register </h1>
- <div id="write">
-        <label>Username: </label>
-        <input type="text" id="username">
-    </div>
 <form action="./registration.html" method="POST" onsubmit="myFunct()">
+<br>
+<label> Username: <span id="usersname"> </span> </label>
+<input type="text" id="names"> </br>
+ </br>
 <br>
 <label for="First-name"> Enter your First Name: <span style="color:#ff0000">*</span> </label>
 <input type="text" name="First-name" id="First-name"> </br>
@@ -46,6 +46,7 @@
 </body>
 
 <script>
+
 var f1= document.getElementById("First-name");
 var l1= document.getElementById("Last-name");
 var e1= document.getElementById("email");
@@ -56,13 +57,18 @@ var s1= document.getElementById("other");
 var s2= document.getElementById("Others");
 var p1= document.getElementById("Place");
 
-function Print() {
-        document.getElementById("write").innerHTML = username;
+let uname = localStorage.getItem("UNAME")
+ document.getElementById("names").value= uname; 
+ var tf = document.getElementById("names")
+if (window.location.href=="file:///C:/Users/ssundar7/Desktop/testing/registration.html") {
+
+   document.getElementById("names").value = "";
+}
+else {
+	tf.disabled = true; } 
         
-    }
-
 function myFunction() {
-
+  
  if(s1.value == "other") {
    s2.style.display = "block";
    la.style.display = "block";
@@ -76,8 +82,8 @@ function myFunction() {
 function hideMy()
 
 {
- s2.style.display = "none";
-  la.style.display = "none";
+s2.style.display = "none";
+la.style.display = "none";
 } 
 
 function myFunct() {
