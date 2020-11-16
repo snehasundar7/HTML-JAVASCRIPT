@@ -5,7 +5,7 @@
 </head>
 <body onload="hideMy()">
 	<h1> <center> REGISTRATION FORM  </center> </h1>
-	<form action="./registration.html" method="POST" onsubmit="myFunct()"> <br>
+	<form method="POST" onsubmit="myFunct()"> <br>
 <center>	 <label> Username: <span id="usersname" style="color:#ff0000">*</span> </label>
 	<input type="text" id="names" required/> </br>
 <br>
@@ -46,6 +46,7 @@
 </body>
 
 <script>
+
 
 var f1= document.getElementById("First-name");
 var l1= document.getElementById("Last-name");
@@ -118,5 +119,30 @@ if(p1.value == "--Select--") {
    return true;
 }
  }
+let saveFile = () => {
+  let data = 
+            '\r FirstName: ' + f1.value + ' \r\n ' + 
+	    '\r LastName: ' + l1.value + ' \r\n ' + 
+            'Email id: ' +e1.value + ' \r\n ' + 
+            'Email: ' + email.value + ' \r\n ' + 
+            'Place: ' + p1.value + ' \r\n ' + 
+           
+  var textToBLOB = new Blob([data], { type: 'text/plain' });
+        var sFileName = 'formData.txt';
+
+let newLink = document.createElement("a");
+        newLink.download = sFileName;
+if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        }
+        else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            document.body.appendChild(newLink);
+        }
+
+        newLink.click(); 
+}
+
 </script>
 </html>
