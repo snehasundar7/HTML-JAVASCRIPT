@@ -4,10 +4,6 @@
 <title> Registration </title> </head>
 <body onload="hideMy()">
 <h1> Fill Your Details To Register </h1>
- <div id="write">
-        <label>Username: </label>
-        <input type="text" id="username">
-    </div>
 <form action="./registration.html" method="POST" onsubmit="myFunct()">
 <br>
 <label for="First-name"> Enter your First Name: <span style="color:#ff0000">*</span> </label>
@@ -55,11 +51,6 @@ var la= document.getElementById("lab");
 var s1= document.getElementById("other");
 var s2= document.getElementById("Others");
 var p1= document.getElementById("Place");
-
-function Print() {
-        document.getElementById("write").innerHTML = username;
-        
-    }
 
 function myFunction() {
 

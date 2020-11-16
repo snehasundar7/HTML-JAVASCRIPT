@@ -7,8 +7,7 @@
 </head>
 <body>
 <h1> Login Credentials </h1> <div id='main'>
-<form id="sForm" name="credentials" action="file:///C:/Users/Sun/Desktop/registration.html" method="GET" onsubmit="myFunction()"> </form>
-<form id="nForm" name="happy" method="POST" onsubmit="myFunction()"> </form>
+<form name="credentials" action="file:///C:/Users/ssundar7/Desktop/testing/registration.html" method="GET" onsubmit="myFunction()"> 
 <br>
 <label for="username"> Enter your Username: </label>
 <i title="please provide username eg:riyaa_345" style="font-size:14px" class="fa">&#xf05a;</i> 
@@ -21,9 +20,9 @@
 <label for="checking">Remember me</label>
 <input type="checkbox" id="checking" name="checking">
 </br> 
-<input type = "submit" value="Submit" form="nForm" > 
+<input type = "submit" value="Submit"> </form>
 <input type ="reset" value="Reset">
-<button type="submit" form="sForm"> Next </a></button> 
+<button type="submit"> Next </a></button> </form>
 </div> 
 <script>
 var myInput = document.getElementById("username");
