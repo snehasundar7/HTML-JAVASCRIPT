@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<title> Sorting in Textarea </title>
+</head>
+
+<body>
+	<h1> <i>
+			<center> Sorting Number </center>
+		</i> </h1>
+	<form name="form">
+		<center>
+			<label> Enter the Numbers: </label>
+			<br>
+			<textarea type="numbers" id="sorts" name="sorts" rows="5" cols="60" wrap="hard" /></textarea>
+			</br> <br>
+
+			<p> <span id="demo">Ascending Order:</span> </p>
+			</br>
+			<br>
+			<p> <span id="memo"> Descending Order: </span> </p>
+			<br>
+			<p> <span id="nemo"> Maximum Value: </span> </p>
+			<br>
+			<p> <span id="vemo"> Minimum Value: </span> </p>
+			<input type="button" value="Submit" onclick="myFunction();" />
+			</br>
+			<br>
+		</center>
+	</form>
+	<script>
+		function myFunction() {
+			var arr = document.getElementById("sorts").value.split(",");
+			var co = arr.toString()
+			var bye = co.replaceAll(",", "");
+			var reg = /^\d+$/;
+			reg.test(bye);
+			if (!reg.test(bye)) {
+				console.log("fail");
+			}
+			for (var i = 0; i < bye.length; i++) {
+				var n = bye.charCodeAt(i);
+				if ((n > 45 ) && (n < 58 )) {
+					if (n == 32)  {
+						alert("input is not valid");
+						return false;
+					}
+				}
+
+				else {
+					alert("input given is not valid");
+					return false;
+				}
+			}
+			document.getElementById("demo").innerHTML = arr;
+			arr.sort((a, b) => a - b);
+			document.getElementById("demo").innerHTML = arr;
+			arr.sort((a, b) => b - a);
+			document.getElementById("memo").innerHTML = arr;
+			document.getElementById("nemo").innerHTML = Math.max(...arr);
+			console.log(Math.max(arr));
+			document.getElementById("vemo").innerHTML = Math.min(...arr);
+			console.log(Math.min(arr));
+		}
+	</script>
+</body>
+
+</html>
