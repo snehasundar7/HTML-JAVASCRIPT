@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Vehicle Service Login Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sample style.css" type="text/css">
+</head>
+<main>
+  <h1>Welcome to Vehicle Service App</h1>
+  <div class="inset">
+        <form id="sForm" name="credentials" action="C:\Users\ssundar7\Desktop\testing\HTML AND JAVASCRIPT\Registration form css.html" method="GET" onsubmit="myFunction()"> 
+        <form id="nForm" name="happy" method="POST" action="C:\Users\ssundar7\Desktop\testing\HTML AND JAVASCRIPT\Underc.html" onsubmit="myFunction()"> 
+        <div class="backdrop">
+        <h3> <center> Login with you details! </center> </h3>
+        <label for="username"> Enter your Username: </label>     
+        <input type="text" id="username" name="username" pattern=[A-Za-z]{5}_[0-9]{3} form="sForm" required/> </br>
+       
+        <br>
+       
+        <label for="user-pwd"> Enter your Password: </label>
+        <input type="password" id="user-pwd" name="user-pwd" form="sForm" required/>
+        </br>
+        
+        <br>
+        
+        <label for="checking">Remember me</label>
+        <input type="checkbox" id="checking" name="checking">
+        </br> 
+        
+        </div>
+        <input class="p-inherit" type ="submit" value="Sign In" form="nform"> 
+        <button class="p-container" type="submit" form="sForm"> Sign Up </button> 
+        </div> 
+    </form>
+</form>
+
+<script>
+    var myInput = document.getElementById("username"); 
+    var myPass = document.getElementById("user-pwd");
+    function myFunction(){
+        if(myInput.value.length == 0) {
+       alert("Enter Username");
+      } 
+     if(myPass.value.length == 0) {
+       alert("Enter Password");
+      } 
+    
+    const username = document.getElementById("username").value; 
+    localStorage.setItem("UNAME",username)}
+</script>
+</main>
+</html>       
+
+
